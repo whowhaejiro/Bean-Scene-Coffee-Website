@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 200px 20px 200px;
+}
+
+.nav-logo {
+    font-family: "Clicker Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    color: #ffff;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a, .nav-cta a {
+    text-decoration: none;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: #ffff;
+}
+
+.nav-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-cta a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-cta .sign-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.nav-cta .sign-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9c06a;
+    color: #1e1e1e;
+    border-radius: 24px;
+    width: 100px;
+    height: 48px;
+    border: none;
+}
+
+.nav-cta .sign-up:hover {
+    background-color: #ffbc57;
+    color: #000;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0 200px;
+    position: relative;
+    background: url(images/coffee_image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/overlay.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 100px;
+    gap: 20px;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: #ffff;
+}
+
+.hero-title {
+    font-family: "Clicker Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 300px;
+    color: #ffff;
+}
+
+.hero-info {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #ffff;
+    width: 90%;
+}
+
+.hero-btn, .about-btn, .card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9c06a;
+    border-radius: 24px;
+    width: 136px;
+    height: 48px;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e1e1e;
+}
+
+.hero-btn:hover {
+    background-color: #ffbc57;
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    padding: 200px;
+    gap: 4rem;
+    margin-bottom: 50px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 120px 0 0;
+    gap: 3rem;
+}
+
+.about-title, .product-title, .choose-us-title, .info-heading {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 62px;
+    color: #613809;
+}
+
+.about-info, .product-subtitle, .choose-us-subtitle, .info-subheading {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+    color: #707070;
+}
+
+.about-img {
+    padding: 50px 0 50px 0;
+}
+
+.about-img img {
+    width: 550px;
+    height: 515px;
+}
+
+.about-btn:hover {
+    background-color: #ffbc57;
+}
+
+.spill-overlay {
+    position: relative;
+    width: 600px;
+    z-index: 1;
+    pointer-events: none;
+    margin-top: -500px;
+    margin-bottom: -50px;
+}
+
+.product-card, .choose-us {
+    margin-top: 0;
+    padding: 0 200px 200px 200px;
+}
+
+.product-content, .choose-us-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.product-title, .choose-us-title {
+    text-align: center;
+}
+
+.product-subtitle, .choose-us-subtitle, .info-subheading {
+    text-align: center;
+}
+
+.scrolled {
+    background-color: rgba(25, 23, 22, .6);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    padding: 20px 200px;
+
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card-content {
+    width: 350px;
+    height: 458px;
+    background-color: #fff9f2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    height: 67%;
+}
+
+.card-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
+    gap: 0.3rem;
+    border-left: 1px solid #f9c06a;
+    border-bottom: 1px solid #f9c06a;
+    border-right: 1px solid #f9c06a;
+}
+
+.card-title {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 26px;
+    color: #613809;
+    text-align: center;
+}
+
+.card-description {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: #613809;
+    text-align: center;
+}
+
+.card-price {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
+    color: #613809;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.cards-btn {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-btn:hover {
+    background-color: #ffbc57;
+}
+
+.spill-overlay2 {
+    position: absolute;
+    right: 0;
+    width: 600px;
+    z-index: 1;
+    pointer-events: none;
+    margin-top: -250px;
+    margin-bottom: -50px;
+}
+
+.card2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card2-content {
+    width: 350px;
+    height: 304px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f9c06a;
+    background-color: #fff9f2;
+}
+
+.card2-content:first-child {
+    background-color: #ffeed8;
+    border: none;
+}
+
+.card2-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    padding: 20px 0px 0px 0px;
+}
+
+.card2-img img {
+    width: 100%;
+    height: 70%;
+}
+
+.card2-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+    gap: 0.3rem;
+    padding: 0 60px 20px 60px;
+}
+
+.card2-title {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    color: #613809;
+}
+
+.card2-description {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    color: #707070;
+    text-align: center;
+}
+
+.choose-us {
+    padding: 0 200px 100px 200px;
+}
+
+.choose-us-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.info-heading {
+    text-align: center;
+    font-size: 35px;
+}
+
+.choose-us-info a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9c06a;
+    color: #1e1e1e;
+    border-radius: 24px;
+    width: 100px;
+    height: 48px;
+    border: none;
+    margin-top: 20px;
+}
+
+.choose-us-info a:hover {
+    background-color: #ffbc57;
+    color: #000;
+}
+
+.promo-banner {
+    display: flex;
+    width: 100%;
+    position: relative;
+    color: #ffff;
+    background: url(images/Rectangle\ 14.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+}
+
+.promo-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #613809;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.promo-banner-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 200px;
+    z-index: 2;
+}
+
+.banner-overlay {
+    display: flex;
+    position: relative;
+    right: 0;
+    bottom: 0;
+}
+
+.banner-overlay-img {
+    width: 600px;
+}
+
+.banner-img {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.promo-banner-img {
+    display: flex;
+    flex: 1;
+    z-index: 2;
+    width: 100%;
+}
+
+.promo-banner-img img {
+    display: flex;
+    align-items: center;
+}
