@@ -8,7 +8,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 5;
     width: 100%;
     background-color: transparent;
     backdrop-filter: none;
@@ -78,11 +78,233 @@ header {
     width: 100px;
     height: 48px;
     border: none;
+    cursor: pointer;
 }
 
 .nav-cta .sign-up:hover {
     background-color: #ffbc57;
     color: #000;
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 80vh;
+    background-color: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    gap: 2rem;
+    flex: 1;
+    background-color: #fff5e9;
+    padding: 70px;
+}
+
+.modal-content h3 {
+    font-size: 30px;
+}
+
+.modal-content .form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modal-content .form-cta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-modal {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    padding: 0;
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+    color: #613809;
+    cursor: pointer;
+}
+
+.form label {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -9px;
+    margin-left: 20px;
+}
+
+.modal-input {
+    flex: 1;
+    padding: 18px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 25px;
+    margin: 0;
+    outline: none;
+    font-size: 15px;
+
+}
+
+.modal-content .remember-me {
+    display: flex;
+}
+
+.modal-content .remember-me p {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+    margin-left: 7px;
+}
+
+.modal-content .forgot-password button {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    padding: none;
+    cursor: pointer;
+}
+
+.modal-content .forgot-password button:hover {
+    text-decoration: underline;
+}
+
+.modal-content .submit-btn {
+    width: 150px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f9c06a;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    color: #1e1e1e;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.modal-content .submit-btn:hover {
+    background-color: #ffbc57;
+}
+
+.modal-content #go-to-signup, #go-to-signin, #go-to-login {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content #go-to-signup:hover, #go-to-signin:hover, #go-to-login:hover {
+    text-decoration: underline;
+}
+
+.modal-forgot-password {
+    gap: 1rem;
+}
+
+.modal-forgot-password form {
+    margin-top: 20px;
+}
+
+#forgot-password-info {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.modal-forgot-password .submit-btn {
+    width: 270px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f9c06a;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 17px;
+    color: #1e1e1e;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.modal-forgot-password #go-to-login {
+    text-decoration: underline;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.modal-img {
+    flex: 1;
+    background: url(images/sign-up-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.modal-header {
+    font-family: "Clicker Script", cursive;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    color: #613809;
+    text-align: center;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+.hidden {
+    display: none;
 }
 
 .hero {
